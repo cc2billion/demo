@@ -6,7 +6,7 @@
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>cc demo project</name>
+    <name>demo</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
@@ -18,9 +18,9 @@
     </properties>
 
     <modules>
-        <module>cc demo project-start</module>
-        <module>cc demo project-web</module>
-        <module>cc demo project-service</module>
+        <module>start</module>
+        <module>web</module>
+        <module>service</module>
     </modules>
 
     <dependencies>
@@ -45,10 +45,6 @@
             <artifactId>aliyun-schedulerx-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.4</version>
@@ -57,11 +53,9 @@
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-core</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.taobao.arthas</groupId>
             <artifactId>arthas-spring-boot-starter</artifactId>
-            <version>3.6.7</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -105,18 +99,28 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>com.taobao.arthas</groupId>
+                <artifactId>arthas-spring-boot-starter</artifactId>
+                <version>3.6.7</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>2.0.4</version>
+            </dependency>
+            <dependency>
                 <groupId>com.cc</groupId>
-                <artifactId>cc demo project-start</artifactId>
+                <artifactId>start</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.cc</groupId>
-                <artifactId>cc demo project-web</artifactId>
+                <artifactId>web</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.cc</groupId>
-                <artifactId>cc demo project-service</artifactId>
+                <artifactId>service</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
